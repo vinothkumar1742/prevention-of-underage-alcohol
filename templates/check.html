@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='check.css') }}">
+    </head>
+    <body>
+            <div>
+                <form action="{{ url_for('check') }}" method="post" enctype="multipart/form-data">
+                    <h1>enter aadhar and give finger print</h1>
+                    <input id="aadhar" name="aadhar" type="text" placeholder="Enter aadhar No" class="textbox"/>
+                    <br>
+                    <h4>Give your fingerprint</h4>
+                    <input id="fingerprint" name="img" type="file"  required class="textbox" accept="Image/*"/>
+                    <br>
+                    <input type="submit" id="btn" value="Login Now">
+                    <h1>{{ msg }}</h1>
+                    <h1>{{ name }}</h1>
+                    <h1>{{ age }}</h1>
+                    <h1>{{ aadharno }}</h1>
+                    <h1>{{fp}}</h1>
+                    <h1>{{a}}</h1>
+                    <h1>{{b}}</h1>
+                    <h1>{{c}}</h1>
+
+                </form>        
+            </div>
+    </body>
+</html>

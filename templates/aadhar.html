@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='aadhar.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <div class="full">
+        <div class="title" >
+            <img src="{{ url_for('static', filename='title.png') }}" alt=""style="height: 40px;width: 60px;"class="title">
+        </div>
+        <div class="center" >
+            <form action="{{ url_for('check') }}" method="post" enctype="multipart/form-data">
+                <h1>Enter customer details</h1>
+                <input id="aadhar" name="aadhar" type="text" placeholder="Enter aadhar No" class="textbox"/>
+                <br>
+                <input id="fingerprint" name="img" type="file"  required class="textbox" accept="Image/*"/>
+                <br>    
+                <input type="submit" id="btn" value="Check">
+                <h1 class="msg">{{ msg }}</h1>
+                <h1 class="msg">{{ fp }}</h1>
+            </form> 
+        </div>
+        <div class="right">
+            <img src="{{ url_for('static', filename='fp5.jpg') }}" class="image">
+        </div>
+        <div class="logout">
+            <a href="C:\Users\Mohamed Ashkar\Desktop\finger print db\web pages\templates\login.html" class="logout">logout</a>
+        </div>
+    </div>
+
+</body>
+</html>

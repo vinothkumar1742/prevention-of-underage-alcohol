@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='match.css') }}">
+</head>
+<body>
+    <div class="full">
+        <div class="left">
+            <h1 class="head">Fingerprint</h1>
+            <h1 class="head">matched </h1>
+            <h1 class="head"> with aadhar card </h1>
+            <img src="{{ url_for('static', filename='title.png') }}" class="title">
+        </div>
+        <div class="right">
+            <form action="/check_limit" method="post"> 
+                <h1 class="details">{{ msg }}</h1>
+                <h1 class="details">{{ name }}</h1>
+                <h1 class="details">{{ age }}</h1>
+                <h1 class="details">{{ aadharno }}</h1>
+                <h1 class="age">eligible age for purchase</h1>
+                <input type="submit" id="btn" value="check limit">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

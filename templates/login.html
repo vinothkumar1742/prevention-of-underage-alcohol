@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='minor.css') }}">
+    </head>
+    <body>
+        
+        <div class="con">
+            <div  class="left">
+                    <h1>Login</h1>
+                    <p>Only For Wineshop Stakeholder</p>
+                    <form action="/login" method="post">   
+                    <div class="msg"><h1>{{ msg }}</h1></div>
+                        <input id="i" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
+                        <br>
+                        <input id="pa" name="password" type="password" placeholder="Enter Your Password" class="textbox"/>
+                        <br>
+                        <!--<button type="submit" id="btn">Login Now</button>-->
+                        <input type="submit" id="btn" value="Login Now">
+                    </form>
+                
+
+
+            </div>
+             <div class="right">
+                <img src="{{ url_for('static', filename='drug (1).jpg') }}" alt="nodrungs img" id="im">
+            
+            </div>
+        </div>
+            
+       
+
+
+        
+    </body>
+</html>

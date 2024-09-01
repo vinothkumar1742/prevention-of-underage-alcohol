@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='check_limit.css') }}" >
+</head>
+<body>
+    <div class="full">
+        <div class="left">
+            <h1 class="head">your daily limit</h1>
+            <h1 class="head">exist</h1>
+            <img src="{{ url_for('static', filename='title.png') }}" class="title">
+        </div>
+        <div class="right">
+            <form action="{{ url_for('update') }}" method="post">
+                <center>
+                    <h1 class="details">{{ name }} is allowed to buy alcohol today</h1>
+                    <h1 class="details">last purchase on{{ last_buy}}</h1>
+                    <h1 class="age">daily limit exist</h1>
+                    <input type="submit" id="btn" value="buy-update">
+                </center>
+            </form>    
+        </div>
+    </div>
+    
+</body>
+</html>
